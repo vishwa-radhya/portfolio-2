@@ -9,30 +9,26 @@ section{
     height: 100vh;
     font-family: 'Poppins',sans-serif;
 }
+body{
+    background-color: rgb(5, 5, 39);
+}
 nav{
-    height: 5vh;
-    width: 100%;
     display: flex;
     position: fixed;
+    width: 20%;
     z-index: 10;
 }
-nav > *:nth-child(1){
-    height: 8vh;
-    width: 5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 0;
-}
-nav > *:nth-child(2){
-    height: 8vh;
+
+#icon-container{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    overflow: hidden;
-    transition: 0.5s ease;
     width: 0;
+    overflow: hidden;
+    transition: 0.55s ease;
 }
+
+
 button{
     outline: none;
     background: none;
@@ -159,11 +155,11 @@ stroke-dashoffset: -32.42;
 .p-shape{
     width: 15%;
     height: 30%;
-    background-color: rgb(188, 36, 36);
+    background-color: rgb(238, 46, 97);
     border-radius: 50%;
     position: relative;
-    top: 20%;
-    right: 10%;
+    top: 0%;
+    right: 15%;
     z-index: 1;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.668),-5px -5px 5px rgba(0, 0, 0, 0.632);
 }
@@ -175,18 +171,14 @@ stroke-dashoffset: -32.42;
     position: relative;
     z-index: 1;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.668),-5px -5px 5px rgba(0, 0, 0, 0.632);
-    bottom: 20%;
-    left: 10%;
+    bottom: 0%;
+    left: 15%;
 }
 .p-container{
     z-index: 3;
     width: 80%;
     height: 90%;
-    background-color: antiquewhite;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.06);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
     -webkit-box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
     box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
     border-radius: 8px;
@@ -197,7 +189,6 @@ stroke-dashoffset: -32.42;
     padding: 10px;
 }
 .p-links{
-    border: 1px solid white;
     width: 22%;
     height: 43%;
     box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
@@ -207,7 +198,9 @@ stroke-dashoffset: -32.42;
     align-items: center;
     justify-content: space-around;
     color: whitesmoke;
-    background-color: inherit;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 .p-links p{
     text-align: center;
@@ -247,6 +240,39 @@ img{
 .g-img img:hover{
     scale: 0.9;
 }
+@media screen and (max-width:1125px){
+    .p-shape{
+        width: 16%;
+    height: 32%;
+    }
+    .p-shape-2{
+        width: 16%;
+    height: 32%;
+    }
+}
+@media screen and (max-width:1000px){
+    .p-shape{
+        width: 13.5%;
+    height: 23%;
+    }
+    .p-shape-2{
+        width: 13.5%;
+        height: 23%;
+    }
+}
+@media screen and (max-width:801px){
+    nav{
+        width: 30%;
+    }
+    .p-shape{
+        width: 13.5%;
+    height: 18.5%;
+    }
+    .p-shape-2{
+        width: 13.5%;
+        height: 18.5%;
+    }
+}
 @media screen and (max-width:700px){
     .card h3{
         font-size: 0.8rem;
@@ -263,6 +289,14 @@ img{
     .hamburger{
         scale: 0.8;
     }
+    .p-shape{
+        width: 13.5%;
+    height: 16%;
+    }
+    .p-shape-2{
+        width: 13.5%;
+        height: 16%;
+    }
 }
 @media  screen and (max-width:607px) {
     .fab{
@@ -277,6 +311,17 @@ img{
     .p-links a{
         font-size: 0.75rem;
     }
+    nav{
+        width: 35%;
+    }
+    .p-shape{
+        width: 18.5%;
+    height: 19%;
+    }
+    .p-shape-2{
+        width: 18.5%;
+        height: 19%;
+    }
 }
 @media  screen and (max-width:550px){
     .card{
@@ -285,10 +330,31 @@ img{
     .p-links{
         width: 30%;
     }
+    .p-shape{
+        width: 14.5%;
+    height: 15%;
+    left: -5%;
+    }
+    .p-shape-2{
+        width: 14.5%;
+    height: 15%;
+        left: 5%;
+    }
 }
 @media  screen and (max-width:451px){
     .fab{
         font-size: 40px;
+    }
+    nav{
+        width: 40%;
+    }
+    .p-shape{
+        width: 19%;
+        left: -10%;
+    }
+    .p-shape-2{
+        width: 19%;
+        left: 10%;
     }
 }
 @media  screen and (max-width:401px){
@@ -297,6 +363,15 @@ img{
     }
     .social-icons{
         width: 70%;
+    }
+    nav{
+        width: 45%;
+    }
+    .p-shape{
+        height: 13.5%;
+    }
+    .p-shape-2{
+        height: 13.5%;
     }
 }
 @media  screen and (max-width:350px){
@@ -312,9 +387,25 @@ img{
     .card{
         width: 65%;
     }
+    nav{
+        width: 50%;
+    }
+    .p-shape{
+        height: 11.5%;
+        top: 10%;
+    }
+    .p-shape-2{
+        height: 11.5%;
+        top: -10%;
+    }
 }
 @media  screen and (max-width:330px){
     .hamburger svg{
         height: 2.5em;
+    }
+}
+@media  screen and (max-width:290px){
+    nav{
+        width: 60%;
     }
 }
