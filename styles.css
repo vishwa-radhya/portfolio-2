@@ -1,6 +1,5 @@
 *{
     margin: 0;
-    -webkit-tap-highlight-color: transparent;
 }
 html{
     scroll-behavior: smooth;
@@ -27,6 +26,7 @@ nav{
     width: 0;
     overflow: hidden;
     transition: 0.55s ease;
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -37,6 +37,7 @@ button{
     cursor: pointer;
     backdrop-filter: blur(20px);
     transition: .3s ease;
+    -webkit-tap-highlight-color: transparent;
 }
 i{
     color: ghostwhite;
@@ -53,10 +54,12 @@ i:hover{
   
 .hamburger input {
     display: none;
+    -webkit-tap-highlight-color: transparent;
 }
 .hamburger svg {
     height: 3em;
     transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-tap-highlight-color: transparent;
   }
   
 .line {
@@ -95,6 +98,7 @@ stroke-dashoffset: -32.42;
     justify-content: space-evenly;
     align-items: center;
     color: rgba(245, 245, 245, 0.793);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .card >*:nth-child(1){
