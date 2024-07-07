@@ -157,28 +157,35 @@ stroke-dashoffset: -32.42;
     position: absolute;
     z-index: 2;
 }
-.p-shape{
-    width: 15%;
-    height: 30%;
-    background-color: rgb(238, 46, 97);
-    border-radius: 50%;
-    position: relative;
-    top: 0%;
-    right: 15%;
-    z-index: 1;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.668),-5px -5px 5px rgba(0, 0, 0, 0.632);
+.triangle {
+	position: relative;
+	background-color: rgb(78, 201, 21);
+	text-align: left;
 }
-.p-shape-2{
-    width: 15%;
-    height: 30%;
-    background-color: rgb(36, 147, 188);
-    border-radius: 50%;
-    position: relative;
-    z-index: 1;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.668),-5px -5px 5px rgba(0, 0, 0, 0.632);
-    bottom: 0%;
-    left: 15%;
+.triangle:before,
+.triangle:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
 }
+.triangle,
+.triangle:before,
+.triangle:after {
+	width:  11em;
+	height: 11em;
+	border-top-right-radius: 30%;
+}
+
+.triangle {
+	transform: rotate(-150deg) skewX(-30deg) scale(1,.866);
+}
+.triangle:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangle:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
 .p-container{
     z-index: 3;
     width: 80%;
@@ -247,36 +254,22 @@ img{
     scale: 0.9;
 }
 @media screen and (max-width:1125px){
-    .p-shape{
-        width: 16%;
-    height: 32%;
-    }
-    .p-shape-2{
-        width: 16%;
-    height: 32%;
-    }
-}
-@media screen and (max-width:1000px){
-    .p-shape{
-        width: 13.5%;
-    height: 23%;
-    }
-    .p-shape-2{
-        width: 13.5%;
-        height: 23%;
+        .triangle,
+    .triangle:before,
+    .triangle:after{
+        width: 10em;
+        height: 10em;
     }
 }
 @media screen and (max-width:801px){
     nav{
         width: 30%;
     }
-    .p-shape{
-        width: 13.5%;
-    height: 18.5%;
-    }
-    .p-shape-2{
-        width: 13.5%;
-        height: 18.5%;
+    .triangle,
+    .triangle:before,
+    .triangle:after{
+        width: 8em;
+        height: 8em;
     }
 }
 @media screen and (max-width:700px){
@@ -295,14 +288,6 @@ img{
     .hamburger{
         scale: 0.8;
     }
-    .p-shape{
-        width: 13.5%;
-    height: 16%;
-    }
-    .p-shape-2{
-        width: 13.5%;
-        height: 16%;
-    }
 }
 @media  screen and (max-width:607px) {
     .fab{
@@ -320,13 +305,14 @@ img{
     nav{
         width: 35%;
     }
-    .p-shape{
-        width: 18.5%;
-    height: 19%;
+    .triangle,
+    .triangle:before,
+    .triangle:after{
+        width: 6em;
+        height: 6em;
     }
-    .p-shape-2{
-        width: 18.5%;
-        height: 19%;
+    .triangle {
+        transform: rotate(-230deg) skewX(-30deg) scale(1,.866);
     }
 }
 @media  screen and (max-width:550px){
@@ -336,15 +322,14 @@ img{
     .p-links{
         width: 30%;
     }
-    .p-shape{
-        width: 14.5%;
-    height: 15%;
-    left: -5%;
+    .triangle,
+    .triangle:before,
+    .triangle:after{
+        width: 8em;
+        height: 8em;
     }
-    .p-shape-2{
-        width: 14.5%;
-    height: 15%;
-        left: 5%;
+    .triangle {
+        transform: rotate(-280deg) skewX(-30deg) scale(1,.866);
     }
 }
 @media  screen and (max-width:451px){
@@ -354,13 +339,14 @@ img{
     nav{
         width: 40%;
     }
-    .p-shape{
-        width: 19%;
-        left: -10%;
+    .triangle,
+    .triangle:before,
+    .triangle:after{
+        width: 8em;
+        height: 8em;
     }
-    .p-shape-2{
-        width: 19%;
-        left: 10%;
+    .triangle {
+        transform: rotate(-220deg) skewX(-30deg) scale(1,.866);
     }
 }
 @media  screen and (max-width:401px){
@@ -373,11 +359,14 @@ img{
     nav{
         width: 45%;
     }
-    .p-shape{
-        height: 13.5%;
+    .triangle,
+    .triangle:before,
+    .triangle:after{
+        width: 7em;
+        height: 7em;
     }
-    .p-shape-2{
-        height: 13.5%;
+    .triangle {
+        transform: rotate(-140deg) skewX(-30deg) scale(1,.866);
     }
 }
 @media  screen and (max-width:350px){
@@ -396,22 +385,35 @@ img{
     nav{
         width: 50%;
     }
-    .p-shape{
-        height: 11.5%;
-        top: 10%;
-    }
-    .p-shape-2{
-        height: 11.5%;
-        top: -10%;
+    .triangle,
+    .triangle:before,
+    .triangle:after{
+        width: 5em;
+        height: 5em;
     }
 }
 @media  screen and (max-width:330px){
     .hamburger svg{
         height: 2.5em;
     }
+    .triangle,
+    .triangle:before,
+    .triangle:after{
+        width: 4em;
+        height: 4em;
+    }
 }
 @media  screen and (max-width:290px){
     nav{
         width: 60%;
+    }
+    .triangle,
+    .triangle:before,
+    .triangle:after{
+        width: 3.7em;
+        height: 3.7em;
+    }
+    .triangle {
+        transform: rotate(20deg) skewX(-30deg) scale(1,.866);
     }
 }
